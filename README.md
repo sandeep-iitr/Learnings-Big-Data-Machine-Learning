@@ -2,9 +2,9 @@
 
 ## Some of the things I do in free time
 
-## MySQL- Refreshing again
+## MySQL- Refreshing again, back to basics!!
 
-Root Password:  k1g(vqTkmFf# 
+Root Password:  mysqlpass 
 (But you don't know my machine !!)
 
 ## Softwares:
@@ -14,8 +14,17 @@ Root Password:  k1g(vqTkmFf#
 ## Connecting to MySQL
     mysqlsh -u root -h localhost
     \sql
-  
+    
+## MySQL learning    
   - Alter user command: change password
     
         ALTER USER 'root'@'localhost' IDENTIFIED BY 'mysqlpass';
-    
+  
+  - Creating a Database
+  
+        CREATE DATABASE TREE_DB;
+        Show databases;
+   
+  - Creating a table
+        
+        
