@@ -34,4 +34,19 @@ Root Password:  mysqlpass
         describe tree;
  
   - Inserting data into table
-  
+     
+     Loading data from .txt file, with items in the same order as the columns, and each cell value
+     separated by a tab. For empty or null values use \n. 
+     For example for a table of values
+       
+        ID   P_ID
+        1   2
+        3   2
+        6   8
+        9   8  
+        2   5
+        8   5
+        5   NULL
+        
+    We can use:
+      
