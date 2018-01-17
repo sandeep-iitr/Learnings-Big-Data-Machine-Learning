@@ -96,5 +96,20 @@
 
 ## Playing with Data
     
-        
+- This is a binary tree data structure which has root 5, two inner nodes: 2,8 and four leaf nodes: 1,3,6,9
+
+       #Printing all non-leaf nodes
+       SELECT id FROM tree WHERE id in (SELECT p_id  FROM tree);
+       #outputs: 2,5,8
+       
+       # Printing the root
+       SELECT id FROM tree WHERE P_id is null;
+       #output: 5
+       
+       #Printing leaf nodes, note the null condition is important
+       SELECT id FROM tree WHERE id not  in (SELECT p_id  FROM tree where p_id is not null);
+   
+
+
+
       
