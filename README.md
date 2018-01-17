@@ -14,5 +14,8 @@ Root Password:  k1g(vqTkmFf#
 ## Connecting to MySQL
     mysqlsh -u root -h localhost
     \sql
+  
+  - Alter user command: change password
     
+        ALTER USER 'root'@'localhost' IDENTIFIED BY 'mysqlpass';
     
