@@ -3,7 +3,8 @@
 ## Some of the things I do in free time
 
 ## MySQL- Refreshing again, back to basics!!
-mysqld --init-file /Users/administrator/Research/trainings/learnings/github/mySQL/mysql-init
+    
+   
 
 ## Softwares:
 - MySQL Community Server: https://dev.mysql.com/downloads/mysql/
@@ -33,6 +34,10 @@ mysqld --init-file /Users/administrator/Research/trainings/learnings/github/mySQ
     FLUSH PRIVILEGES;
     ALTER USER 'root'@'localhost' IDENTIFIED BY 'mysqlpass';
     
+    
+    # OR follow an easy way
+     mysqld --init-file /Users/administrator/Research/trainings/learnings/github/mySQL/mysql-init
+     
     
    
 ## MySQL learning: System and database set up    
