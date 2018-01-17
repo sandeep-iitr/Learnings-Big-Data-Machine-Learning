@@ -27,4 +27,11 @@ Root Password:  mysqlpass
    
   - Creating a table
         
-        
+        use tree_db;
+        show tables;
+        CREATE TABLE tree (ID INT PRIMARY KEY, P_ID INT); 
+        show tables;
+        describe tree;
+ 
+  - Inserting data into table
+  
