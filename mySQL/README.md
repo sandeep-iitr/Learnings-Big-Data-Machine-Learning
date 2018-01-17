@@ -13,15 +13,28 @@ mysqld --init-file /Users/administrator/Research/trainings/learnings/github/mySQ
 ## Starting MySQL Server
  
     sudo  /usr/local/mysql/support-files/mysql.server start 
-    #Starting with no-password for login
-    sudo  /usr/local/mysql/support-files/mysql.server start  --skip-grant-tables
-    
- 
-
+   
 ## Connecting to MySQL
     mysqlsh -u root -h localhost
     \sql
+   
+    #In case above connecting failed, and you don't know password
+    # may be it was bad day!!
     
+    #Stop MySQL server, if already runnung
+    sudo  /usr/local/mysql/support-files/mysql.server stop 
+    
+    #Starting with MySql no-password for login
+    sudo  /usr/local/mysql/support-files/mysql.server start  --skip-grant-tables
+    
+    # Follow below steps in command line
+    cd /usr/local/mysql/bin
+    sudo ./mysql
+    FLUSH PRIVILEGES;
+    ALTER USER 'root'@'localhost' IDENTIFIED BY 'mysqlpass';
+    
+    
+   
 ## MySQL learning: System and database set up    
   - Alter user command: change password
     
