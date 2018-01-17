@@ -98,18 +98,48 @@
     
 - This is a binary tree data structure which has root 5, two inner nodes: 2,8 and four leaf nodes: 1,3,6,9
 
-       #Printing all non-leaf nodes
+       #Printing id of all the non-leaf nodes
        SELECT id FROM tree WHERE id in (SELECT p_id  FROM tree);
        #outputs: 2,5,8
        
-       # Printing the root
+       # Printing id of the root
        SELECT id FROM tree WHERE P_id is null;
        #output: 5
        
-       #Printing leaf nodes, note the null condition is important
+## Nested Query: Print all lead nodes
+
+       #Printing id of all the leaf nodes, note the null condition is important
        SELECT id FROM tree WHERE id not  in (SELECT p_id  FROM tree where p_id is not null);
-   
-
-
-
+  
+## If Statement in MySQL
+Print all the Leaf and Non-Leaf nodes with designated types
+        
+         SELECT TREE.ID,
+         IF(id not  in (SELECT p_id  FROM tree where p_id is not null),"LEAF","NON-LEAF") 
+         AS TYPE 
+         FROM tree;
       
+## Case Statement for LEAF and NON-Leaf Nodes
+        
+         SELECT id,
+         CASE
+         WHEN id  in (SELECT p_id  FROM tree) THEN "NON-LEAF"
+         WHEN id not in (SELECT p_id  FROM tree where p_id is not null) THEN "LEAF"
+         END
+         FROM tree; 
+         
+         
+         #Inner, leaf and root
+         
+         # leaf nodes: id's which are parent to no other nodes
+         # root node: has p_id as null
+         # Otherwise the node is inner
+         
+         SELECT id,
+         CASE
+         WHEN id not in (SELECT p_id  FROM tree where p_id is not null) THEN "LEAF"
+         When p_id is null THEN "ROOT"
+         else "INNER"
+         END
+         FROM tree; 
+         
