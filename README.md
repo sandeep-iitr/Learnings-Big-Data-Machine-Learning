@@ -62,5 +62,7 @@ Root Password:  mysqlpass
     Loading data command from Sample Text file in my case on my Desktop:
              
         load data local INFILE '/Users/sandeep/Desktop/My Research/Learning/MySQL/input1.txt' INTO TABLE tree;
+        select * from tree;
+        
         
       
