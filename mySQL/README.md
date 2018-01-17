@@ -3,9 +3,7 @@
 ## Some of the things I do in free time
 
 ## MySQL- Refreshing again, back to basics!!
-
-Root Password:  mysqlpass 
-(But you don't know my machine !!)
+mysqld --init-file /Users/administrator/Research/trainings/learnings/github/mySQL/mysql-init
 
 ## Softwares:
 - MySQL Community Server: https://dev.mysql.com/downloads/mysql/
@@ -14,6 +12,10 @@ Root Password:  mysqlpass
 
 ## Starting MySQL Server
  
+    sudo  /usr/local/mysql/support-files/mysql.server start 
+    #Starting with no-password for login
+    sudo  /usr/local/mysql/support-files/mysql.server start  --skip-grant-tables
+    
  
 
 ## Connecting to MySQL
