@@ -15,7 +15,7 @@ Root Password:  mysqlpass
     mysqlsh -u root -h localhost
     \sql
     
-## MySQL learning    
+## MySQL learning: System and database set up    
   - Alter user command: change password
     
         ALTER USER 'root'@'localhost' IDENTIFIED BY 'mysqlpass';
