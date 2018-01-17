@@ -8,8 +8,13 @@ Root Password:  mysqlpass
 (But you don't know my machine !!)
 
 ## Softwares:
+- MySQL Community Server: https://dev.mysql.com/downloads/mysql/
 - MySql Workbench: https://dev.mysql.com/downloads/workbench/
 - MySQL Shell: https://dev.mysql.com/downloads/shell/
+
+## Starting MySQL Server
+ 
+ 
 
 ## Connecting to MySQL
     mysqlsh -u root -h localhost
