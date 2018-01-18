@@ -7,4 +7,8 @@
 - we will use CLISP: An ANSI Common LISP Implementation. It is cross platform
 - Installation in Mac:
   - Install Macport (https://www.macports.org/install.php)
-  - 
+    - Install XCODE and then install the pck for macport.
+  - sudo port install clisp
+    - Now LISP Available on command line
+
+
