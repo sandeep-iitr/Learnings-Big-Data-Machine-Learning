@@ -1,5 +1,5 @@
 
-## [Notes are here](https://github.com/sandeep-iitr/Artificial-Intelligence/blob/master/material/Discussion%201%20-%20LISP%20-%20by%20Andrew%20Forney%20-%20UCLA%20CS.pdf)
+## [Notes are here](https://github.com/sandeep-iitr/Class-Notes/blob/master/Artificial-Intelligenc-CS161/discussions/Discussion%201%20-%20LISP%20-%20by%20Andrew%20Forney%20-%20UCLA%20CS.pdf)
 - Not public notes at present
 
 ## Steps Highlighted Below
