@@ -53,3 +53,30 @@
 ----------
 
 
+;; [Purpose]
+;; Replaces the nth element of the given list L
+;; with the given list R
+;; [Inputs]
+;; L (list) to replace element within
+;; n (int) index to replace in L
+;; R (atom / list) replace L[n] with R
+;; [Outputs]
+;; (list) L with replacement R
+(defun replace-element (L n R)
+  (cond
+       ; Base case: L is empty, so return nil
+       ( (null L)  nil)
+      ; Base case: n has reached 0, so we are
+      ; at the index in L to place R
+      ((= n 0)  (append (list R) ( cdr L ) ) )
+      ; Recursive case: L is not empty and n is not 0, so
+      ; add the first element of L to our result, and then
+      ; recurse on the rest of L and n - 1
+      (t (append (list (car L)) (replace-element ( cdr L ) (- n 1) R)))
+  )
+)
+
+
+(print ( replace-element '(A B C D) 2 'A ))
+
+Output: (A B A D) 
