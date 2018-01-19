@@ -15,7 +15,8 @@
         ; multiply our result by n
         ((> pow 0) (* n (power n (- pow 1))))
          ; Otherwise, power is negative, so we have
-         ; to divide 1 by our result
+         ; to divide 1 by our result; we make it positive, and call it to the positive case, but final result is divided 
+         ; due to initial call
         ((< pow 0) (/ 1 (power n (* pow -1))))
    )
 )
