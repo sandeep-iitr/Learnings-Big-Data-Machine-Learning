@@ -113,5 +113,30 @@ Output: (A B A D)
 -------------------------------------------------
 
 
+; Example for print
+
+(let* ( (X 5) (Y (* X X)) )
+  (print  X)
+  (print Y)
+ )
+
+5 
+25 
+
+
+
+; Example for format
+(let* ( (X 5) (Y (* X X)) )
+  (format t "The value of X is ~S and Y is ~S" X Y)
+)
+
+The value of X is 5 and Y is 25
+
+
+------------------
+
+
+
+
 
 
