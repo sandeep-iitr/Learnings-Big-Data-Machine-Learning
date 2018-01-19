@@ -83,4 +83,35 @@ Output: (A B A D)
 
 
 ----------
+;debugging LISP
+
+
+; We can run some tests here:
+(trace power)
+(print (power 10 2))
+(print (power 10 -2))
+
+;; Tracing function POWER.
+1. Trace: (POWER '10 '2)
+2. Trace: (POWER '10 '1)
+3. Trace: (POWER '10 '0)
+3. Trace: POWER ==> 1
+2. Trace: POWER ==> 10
+1. Trace: POWER ==> 100
+100 
+1. Trace: (POWER '10 '-2)
+2. Trace: (POWER '10 '2)
+3. Trace: (POWER '10 '1)
+4. Trace: (POWER '10 '0)
+4. Trace: POWER ==> 1
+3. Trace: POWER ==> 10
+2. Trace: POWER ==> 100
+1. Trace: POWER ==> 1/100
+1/100 
+
+
+-------------------------------------------------
+
+
+
 
