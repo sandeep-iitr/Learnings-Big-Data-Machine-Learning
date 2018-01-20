@@ -1,6 +1,6 @@
 # Learnings
 
-# Some of random stuff
+# Some of the random stuff
 
 ## 3. [LISP Programming](https://github.com/sandeep-iitr/Learnings/tree/master/LISP-Programming)
 
