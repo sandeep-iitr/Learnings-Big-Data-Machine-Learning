@@ -13,5 +13,6 @@
 - Background 
   - CS210 [Video: Christopher Re Deep Dive](https://www.youtube.com/watch?v=vNwAlR--Krk)
   - [Video: Introduction to Snorkel](https://www.youtube.com/watch?v=pXoiYSQHf2I&feature=youtu.be)
-  - [Workshop on Github](https://github.com/HazyResearch/snorkel/tree/master/tutorials/workshop)
-  
+  - [Snorkel Workshop on Github](https://github.com/HazyResearch/snorkel/tree/master/tutorials/workshop)
+  - [Peter Bailis: MacroBase, Prioritizing Attention in Fast Data Streams | Talks at Google](https://www.youtube.com/watch?v=XhTJEU_l8rw)
+  - 
