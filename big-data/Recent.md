@@ -10,5 +10,7 @@
   - Training Data is the New New OIL.
 - Goal of Project: Create training data heuristically.
   - Past: Create structured data from unstructured text data. Takes a lot of time to do this.
-- Example: 
+- Background 
+  - CS210 [Video: Christopher Re Deep Dive](https://www.youtube.com/watch?v=vNwAlR--Krk)
+  - [Video: Introduction to Snorkel](https://www.youtube.com/watch?v=pXoiYSQHf2I&feature=youtu.be)
   
