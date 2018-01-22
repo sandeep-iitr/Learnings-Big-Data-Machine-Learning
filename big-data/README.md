@@ -4,7 +4,7 @@
 ## 3. INGESTBASE: A Declarative Data Ingestion System
 [Paper](https://arxiv.org/pdf/1701.06093v1.pdf)
 
-Declarative language to do ingestion logic on data and preprocessing, as data is ingested in the system.
+Declarative language to do ingestion logic on data and preprocessing, as data is ingested in the system. 
 
 
 ## 2. AdaptDB: Adaptive Partitioning for Distributed Joins by Samuel Madden, VLDB 2017
