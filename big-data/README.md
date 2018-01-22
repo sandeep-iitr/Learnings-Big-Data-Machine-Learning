@@ -1,6 +1,6 @@
 # Challenges Faced Recently, updated reversely, mostly collection good papers and works
 
-## 5. Macrobase: A Search Engine for Fast Data Streams
+## 5. Macrobase: Prioritizing Attention in Fast Data/ A Search Engine for Fast Data Streams
 [A good video at Data Eng Conf](http://www.dataengconf.com/macrobase-a-search-engine-for-fast-data-streams)
 - Motivation: User attention is limited. A lot of collected data is not used. Roughly only 6% of data is used by big companies.
 - Developed a system, which can do basic transformation, classification and explanation over fast streams of data. Goal is to do this very very fast and show explanation to user.
