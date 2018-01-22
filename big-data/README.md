@@ -6,6 +6,7 @@ Talk on Apache Calcite. Query Optimizer, but it can do much more!!
   - Relational Algebra: explains the original query is same what we are finally executing. 
   - Calcite is more of like a library, that is used to built a database system. It can too run as standalone engine. Does nice job of doing federated queries. Can do queries on csv files, mongodb, cassandra. etc.
   - Main purpose is to power the optimizers of Hive, Streaming SQL in Apache Flink, Apache Beam. 
+  - Talked about materialized view: It is a separate object holding data, which is result of the query. It is not a window anymore on the base table, and a refresh has to take place periodically which reflect changes in the base table. The updates on materialized view have a lag.
 
 ## 3. INGESTBASE: A Declarative Data Ingestion System, Arxiv, Jan, 2017
 [Paper](https://arxiv.org/pdf/1701.06093v1.pdf)
