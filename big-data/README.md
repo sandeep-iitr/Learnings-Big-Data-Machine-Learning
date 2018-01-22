@@ -1,7 +1,7 @@
 # Challenges Faced Recently, updated reversely
 
 
-## 3. INGESTBASE: A Declarative Data Ingestion System
+## 3. INGESTBASE: A Declarative Data Ingestion System, Arxiv, Jan, 2017
 [Paper](https://arxiv.org/pdf/1701.06093v1.pdf)
 
 Declarative language to do ingestion logic on data and preprocessing, as data is ingested in the system. 
