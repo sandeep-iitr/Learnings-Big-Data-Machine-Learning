@@ -2,7 +2,10 @@
 
 ## 4. [Don't optimize my query, optimize by data](http://www.dataengconf.com/dont-optimize-my-queries-optimize-my-data)
 Talk on Apache Calcite. Query Optimizer, but it can do much more!!
-
+- Apache Calcite: Is a top level apache project. 
+  - Relational Algebra: explains the original query is same what we are finally executing. 
+  - Calcite is more of like a library, that is used to built a database system. It can too run as standalone engine. Does nice job of doing federated queries. Can do queries on csv files, mongodb, cassandra. etc.
+  - Main purpose is to power the optimizers of Hive, Streaming SQL in Apache Flink, Apache Beam. 
 
 ## 3. INGESTBASE: A Declarative Data Ingestion System, Arxiv, Jan, 2017
 [Paper](https://arxiv.org/pdf/1701.06093v1.pdf)
