@@ -1,4 +1,7 @@
-# Challenges Faced Recently, updated reversely
+# Challenges Faced Recently, updated reversely, mostly collection good papers and works
+
+## 4. [Don't optimize my query, optimize by data](http://www.dataengconf.com/dont-optimize-my-queries-optimize-my-data)
+Talk on Apache Calcite. Query Optimizer, but it can do much more!!
 
 
 ## 3. INGESTBASE: A Declarative Data Ingestion System, Arxiv, Jan, 2017
