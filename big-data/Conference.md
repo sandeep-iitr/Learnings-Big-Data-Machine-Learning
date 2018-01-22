@@ -8,7 +8,7 @@ Last Deadlines:
 - December 9, 2016: camera-ready deadline for all submissions
 - January 8-11, 2017: conference
 
-# 2. (DataEngConf)[http://www.dataengconf.com/]
+# 2. [DataEngConf](http://www.dataengconf.com/)
 DataEngConf is the first technical conference that bridges the gap between data scientists, data engineers and data analysts. Conference talks focus on examples of real-world architectures of data pipelines and platforms, and applied, practical examples of data science.
 
 Contains some of the very good talks and works in industry and Academia.
