@@ -9,7 +9,7 @@
   - Kernel density estimation (used only for classification) so use here error bounds, prune out all the unnecessary computation. 
   - Time Series Smoothing: challenge is what should be smoothing parameter. See high level trend. 
   
-  - Published in: [SIGMID 2017](http://www.bailis.org/papers/macrobase-sigmod2017.pdf), also presented at [CIDR 2017](http://cidrdb.org/cidr2017/slides/p103-bailis-cidr17-slides.pdf), and presented at [DataEngConf 2017](http://www.dataengconf.com/macrobase-a-search-engine-for-fast-data-streams)
+  - Published in: [SIGMOD 2017](http://www.bailis.org/papers/macrobase-sigmod2017.pdf), also presented at [CIDR 2017](http://cidrdb.org/cidr2017/slides/p103-bailis-cidr17-slides.pdf), and presented at [DataEngConf 2017](http://www.dataengconf.com/macrobase-a-search-engine-for-fast-data-streams)
   - Language used is Java, subset of operators are being transfered in C++, SQL support in future in C++. Future is in Python wrapper around it.
 
 ## 4. [Don't optimize my query, optimize by data](http://www.dataengconf.com/dont-optimize-my-queries-optimize-my-data)
