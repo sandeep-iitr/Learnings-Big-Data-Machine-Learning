@@ -1,5 +1,17 @@
 # Challenges Faced Recently, updated reversely, mostly collection good papers and works
 
+## 5. Macrobase: A Search Engine for Fast Data Streams
+[A good video at Data Eng Conf](http://www.dataengconf.com/macrobase-a-search-engine-for-fast-data-streams)
+- Motivation: User attention is limited. A lot of collected data is not used. Roughly only 6% of data is used by big companies.
+- Developed a system, which can do basic transformation, classification and explanation over fast streams of data. Goal is to do this very very fast and show explanation to user.
+- Did simple optimizations to improve performance:
+  - To do PCA (Sample the data, as data is structured and repeatitive), 
+  - Kernel density estimation (used only for classification) so use here error bounds, prune out all the unnecessary computation. 
+  - Time Series Smoothing: challenge is what should be smoothing parameter. See high level trend. 
+  
+  - Published in: [SIGMID 2017](http://www.bailis.org/papers/macrobase-sigmod2017.pdf), also presented at [CIDR 2017](http://cidrdb.org/cidr2017/slides/p103-bailis-cidr17-slides.pdf), and presented at [DataEngConf 2017](http://www.dataengconf.com/macrobase-a-search-engine-for-fast-data-streams)
+  - Language used is Java, subset of operators are being transfered in C++, SQL support in future in C++. Future is in Python wrapper around it.
+
 ## 4. [Don't optimize my query, optimize by data](http://www.dataengconf.com/dont-optimize-my-queries-optimize-my-data)
 Talk on Apache Calcite. Query Optimizer, but it can do much more!!
 - Apache Calcite: Is a top level apache project. 
