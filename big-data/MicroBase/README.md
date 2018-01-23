@@ -35,3 +35,6 @@ Priorize attention using fast classification and explanation
 
 A small number of optimized, composable operators that can execute across domains.
 
+## 3.2 System Architecture
+
+
