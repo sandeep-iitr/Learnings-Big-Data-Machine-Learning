@@ -23,3 +23,8 @@
  - Adopts work from previous paper on exponentially weighted sketching and streaming data structures\[27,76\] to track correlations between attribute value pairs, improving responsiveness and accuracy in explanation
  
  
+## Sample usecases
+- Mobile applications monitoring
+- Datacenter operation monitoring
+- Industrial monitoring
+
