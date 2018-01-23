@@ -36,6 +36,12 @@ Priorize attention using fast classification and explanation
 A small number of optimized, composable operators that can execute across domains.
 
 ## 3.2 System Architecture
+Design goals: 
+- User can add a new domain specific feature transformations to the start of a pipeline without specifying modifying rest of the pipeline.
+- Users can input rules or labels to perform supervized classification
+- Users can write new pipelines: With feature transformation, classification and explanation operators. It requires time.
+- default 
+
 ### Query pipelines
 - Query specifies: A set of input data sources. as well as logical query plan or pipeline of streaming operators. A high level syntax is there to specify different stages of query processing pipeline.
 
@@ -59,3 +65,11 @@ Domain specific transformations like: windowing, autocorrelation, Statistical Op
 - Each explanation operator return a stream of these aggregates ((label,point)-->Explanation)
 - Emits explanation at user request or at a periodic granularity. 
 
+### 5. Presentation
+- Rank statistics specific to the explanation before presentation.
+- Static report rendered via Rest API or GUI
+
+### Operating modes
+- 1. User interactively explore data by configuring different inputs and selecting different combinations of metrics and attributes.
+- 2. Execute one shot queries that can be run programmatically in a single pass over the data.
+- 3. Execute streaming queries over infinite stream of data. 
