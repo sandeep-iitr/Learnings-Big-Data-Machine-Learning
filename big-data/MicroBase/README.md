@@ -28,3 +28,10 @@
 - Datacenter operation monitoring
 - Industrial monitoring
 
+## 3.1 Core Concepts
+Priorize attention using fast classification and explanation
+- Classification: Classify individual data point
+- Explanation: Group and aggregate multiple data points. Each result can represent many individual classification outputs, further prioritizing attention. 
+
+A small number of optimized, composable operators that can execute across domains.
+
