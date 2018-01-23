@@ -17,6 +17,9 @@
    - Require expertise in domain, statistics, ML and data flow processing.
    - Such a combination is rare.
    
-   
-   
-  
+ ## MacroBase Core Challenges and Contributions
+ - Several Algorithmic advances as core research challenges
+ - Novel stream sampler: Adaptable Damped Reservoir, which performs sampling over arbitrarily sized exponentially damped wondows.
+ - Adopts work from previous paper on exponentially weighted sketching and streaming data structures\[27,76\] to track correlations between attribute value pairs, improving responsiveness and accuracy in explanation
+ 
+ 
