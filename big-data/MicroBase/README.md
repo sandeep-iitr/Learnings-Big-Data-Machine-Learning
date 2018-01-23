@@ -13,3 +13,10 @@
   - Executing quickly to keep up with immense data volumes.
   - Adapting to changes within the data stream itself
   
+ - Challenge:
+   - Require expertise in domain, statistics, ML and data flow processing.
+   - Such a combination is rare.
+   
+   
+   
+  
