@@ -1,5 +1,7 @@
 # Paper in SIGMOD 2017
 
+[Paper](http://www.bailis.org/papers/macrobase-sigmod2017.pdf)
+
 ## Novelties
 - A new reservoir sampler and Heavy-hitters sketch specialized for fast data
 - Maximize the utility of each result being shown.
