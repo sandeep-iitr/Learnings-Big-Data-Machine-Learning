@@ -107,6 +107,24 @@ MDP uses ADR to solve model retraining and quantile estimation problems.
 Differentiate inliers and outliers according to their attributes. Uses **realtive risk ratio**.
 
 ### 5.1 Semantcis: Support and Risk Ratio
+- Explanation of risk ratio
 
+### 5.2 Basic Explanation Strategy
+#### Optimization: Exploit cardinality imbalance
+- Search for outlier attributes with minimum occurence first and then search inlier attributes while only searching for attributes that were supported in the outliers. This reduces the space of inlier attributes to explore.
+
+#### Optimization: Individual item ratios are cheap
+- First compute occurences of attributes individually in both inliers and outliers and then computer occurence of attribute combination whose members have sufficient risk ratios.
+
+#### Algorithms and Data Structures
+- Goal is to optimize the attribute value counting
+- Uses Prefix-tree-based approach inspired by FPGrowth\[40\]. FPGrowth maintains a frequency descending prefix tree of attributes that can subsequently be mined by recursively generating a set of conditional trees.  
+
+#### End result
+ Described in **algorithm 2**.
+- It describe the process of generating the most relevant attributes responsible for the outliers.
+- See it again ? very simple but interesting approach.
+
+### 5.3 Streaming Explanation
 
 
