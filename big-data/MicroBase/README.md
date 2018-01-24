@@ -73,3 +73,8 @@ Domain specific transformations like: windowing, autocorrelation, Statistical Op
 - 1. User interactively explore data by configuring different inputs and selecting different combinations of metrics and attributes.
 - 2. Execute one shot queries that can be run programmatically in a single pass over the data.
 - 3. Execute streaming queries over infinite stream of data. 
+
+## 4. MicroBase (MDP)Classification
+### 4.1 Robust Distribution Estimation
+- Traditional approach Z-Score of a point (number of standard deviations away this point lie away from mean): Is not safe, one outlier can affect the mean of the sample and thus can effect the z score. 
+- To address this: MDP uses robust statistical estimation: where assumption is most of the data is well behaved but may contain a number of ill behaved points.
