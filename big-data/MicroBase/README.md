@@ -82,5 +82,20 @@ Domain specific transformations like: windowing, autocorrelation, Statistical Op
 
 ### 4.2 MDP Streaming Execution
 
+#### Adaptable damped reservoir (ADR)
+Solution to retraining problem, as distributions within data streams change over time.
+- ADR is novel adaptation of reservoir sampler. 
+- MDP maintains an ADR sample of the input to periodically recompute its robust estimator and a second ADR sample of the outlier scores to periodically recompute its quantile threshold. 
+- Need to maintain a sample of values, we will add new points with some probabilitity, and insertion of tuple can be decided by both time based and tuple based delay policies.
+
+MDP uses ADR to solve model retraining and quantile estimation problems.
+
+#### Maintaing training inputs
+- Retrains model based on content of the ADR.
+
+#### Maintaing percentile thresholds
+- Check it again, it is important
+
+
 
 
