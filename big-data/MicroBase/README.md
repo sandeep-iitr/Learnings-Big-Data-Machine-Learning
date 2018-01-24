@@ -2,6 +2,15 @@
 
 [Paper](http://www.bailis.org/papers/macrobase-sigmod2017.pdf)
 
+[Talk at Google 2017](https://www.youtube.com/watch?v=XhTJEU_l8rw)
+
+[Slides at CIDR 2017](http://cidrdb.org/cidr2017/slides/p103-bailis-cidr17-slides.pdf)
+
+[Slides from Peter](https://sdsi.stanford.edu/sites/default/files/bailis-sdsi-june22017.pdf)
+
+[Talk and Slides from Sahaana](http://www.dataengconf.com/macrobase-a-search-engine-for-fast-data-streams)
+
+
 ## Novelties
 - A new reservoir sampler and Heavy-hitters sketch specialized for fast data
 - Maximize the utility of each result being shown.
