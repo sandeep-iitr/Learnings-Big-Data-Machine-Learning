@@ -127,4 +127,7 @@ Differentiate inliers and outliers according to their attributes. Uses **realtiv
 
 ### 5.3 Streaming Explanation
 
+#### Implementation: Single attribute summarization
+- Problem of maintaining a count of frequent items: (Heavy hitters or attributes with top k occurence) in data streams.
+- Proposes: **Amortized Maintenance Counter(AMC)** algorithm 3, AMC uses larger memory, but is faster to update and still limits total space utilization.  
 
