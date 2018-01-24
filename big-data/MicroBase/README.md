@@ -76,9 +76,15 @@ Domain specific transformations like: windowing, autocorrelation, Statistical Op
 
 ## 4. MicroBase (MDP)Classification
 ### 4.1 Robust Distribution Estimation
-- Traditional approach Z-Score of a point (number of standard deviations away this point lie away from mean): Is not safe, one outlier can affect the mean of the sample and thus can effect the z score. 
-- To address this: MDP uses robust statistical estimation: where assumption is most of the data is well behaved but may contain a number of ill behaved points. For univariate data, an alternative to Z-score is to use median and median absolute deviation (MAD) instead of mean and standard deviation. Reason: Median is resistant to outliers. In multivariate too paper uses an approach. Shows in graph that z score is not so robust, and MAD and others are robust.
+- Traditional approach Z-Score of a point (number of standard deviations away this point lie away from mean): Is not safe, one outlier can affect the mean of the sample and thus can effect the **z score.**
+- To address this: MDP uses robust statistical estimation: where assumption is most of the data is well behaved but may contain a number of ill behaved points. For univariate data, an alternative to Z-score is to use median and **median absolute deviation (MAD)** instead of mean and standard deviation. Reason: Median is resistant to outliers. In multivariate too paper uses an approach. Shows in graph that z score is not so robust, and MAD and **Minimum Covariance Determinant*(MCD)* are robust.
 - There is possibilty of using other more sophisticated detectors (which are discussed in Appendix D).
+
+#### Classifying outliers
+- For query with single univariate metric uses MAD based detector.
+- With multiple metrics, computes MCD via iterative approximation called FastMCD.
+
+These unsupervised models allow MDP to score points without requiring labels or rules from users. 
 
 ### 4.2 MDP Streaming Execution
 
@@ -87,6 +93,7 @@ Solution to retraining problem, as distributions within data streams change over
 - ADR is novel adaptation of reservoir sampler. 
 - MDP maintains an ADR sample of the input to periodically recompute its robust estimator and a second ADR sample of the outlier scores to periodically recompute its quantile threshold. 
 - Need to maintain a sample of values, we will add new points with some probabilitity, and insertion of tuple can be decided by both time based and tuple based delay policies.
+- Tuple at a time decay policy may skew the reservoir towards periods of high stream volume.
 
 MDP uses ADR to solve model retraining and quantile estimation problems.
 
@@ -96,6 +103,10 @@ MDP uses ADR to solve model retraining and quantile estimation problems.
 #### Maintaing percentile thresholds
 - Check it again, it is important
 
+## 5. MDP Explanation
+Differentiate inliers and outliers according to their attributes. Uses **realtive risk ratio**.
+
+### 5.1 Semantcis: Support and Risk Ratio
 
 
 
