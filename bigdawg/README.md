@@ -42,6 +42,13 @@ This installation is setting up polystore using docker container.
 - curl -X POST -d "<query-goes-here>" http://localhost:8080/bigdawg/query/
 - curl -X POST -d "bdrel(select * from mimic2v26.d_patients limit 4;)" http://localhost:8080/bigdawg/query/
 - curl -X POST -d "bdarray(filter(myarray,dim1>150))" http://localhost:8080/bigdawg/query/
+- curl -X POST -d "bdtext({ 'op' : 'scan', 'table' : 'mimic_logs', 'range' : { 'start' : ['r_0001','',''], 'end' : ['r_0015','','']} });" http://localhost:8080/bigdawg/query/
+
+- Join data across two postgres instances
+  - bdrel(select * from mimic2v26.additives,mimic2v26.admissions where mimic2v26.additives.subject_id=mimic2v26.admissions.subject_id limit 10)
+- Moves data from scidb to postgres: bdcast: tell to move data.
+  - bdrel(select * from bdcast( bdarray(filter(myarray,dim1>150)), tab6, '(i bigint, dim1 real, dim2 real)', relational))
+
 
 
 
