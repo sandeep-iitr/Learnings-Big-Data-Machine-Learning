@@ -1,5 +1,16 @@
 # Paper in SIGMOD 2017
 
+[Paper](http://www.bailis.org/papers/macrobase-sigmod2017.pdf)
+
+[Talk at Google 2017](https://www.youtube.com/watch?v=XhTJEU_l8rw)
+
+[Slides at CIDR 2017](http://cidrdb.org/cidr2017/slides/p103-bailis-cidr17-slides.pdf)
+
+[Slides from Peter](https://sdsi.stanford.edu/sites/default/files/bailis-sdsi-june22017.pdf)
+
+[Talk and Slides from Sahaana](http://www.dataengconf.com/macrobase-a-search-engine-for-fast-data-streams)
+
+
 ## Novelties
 - A new reservoir sampler and Heavy-hitters sketch specialized for fast data
 - Maximize the utility of each result being shown.
@@ -127,4 +138,7 @@ Differentiate inliers and outliers according to their attributes. Uses **realtiv
 
 ### 5.3 Streaming Explanation
 
+#### Implementation: Single attribute summarization
+- Problem of maintaining a count of frequent items: (Heavy hitters or attributes with top k occurence) in data streams.
+- Proposes: **Amortized Maintenance Counter(AMC)** algorithm 3, AMC uses larger memory, but is faster to update and still limits total space utilization.  
 
