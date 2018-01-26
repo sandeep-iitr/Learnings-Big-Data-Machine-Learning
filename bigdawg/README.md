@@ -22,8 +22,15 @@ This installation is setting up polystore using docker container.
 - User Specifies the Island: 
   - *Relational(Select avg(temp) from device)*
   - *Array(Multiply(A,B))*
+  - Cast data between engines
+  
 - Islands:
   - Have a data model, A language or set of operators, A set of candidate database engines.
   - Islands do intersetions of databases
   - Bigdawg does union of Islands.
   
+## 4. Applied to MIMIC II Medical Dataset
+[Video](https://www.youtube.com/watch?v=1GjA2mJFBb0)
+
+- Analytics: Realtime : So support for streaming databases in future.
+- Prototype for medical data
