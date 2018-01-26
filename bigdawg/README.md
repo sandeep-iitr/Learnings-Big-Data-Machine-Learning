@@ -12,3 +12,7 @@ This installation is setting up polystore using docker container.
 - Parallel databases: Single table over multiple computing elements: SciDB, TeriData (Relational parallel database)
 - Polystores: Design to simulate work with disaparate database engines. Support complete functionality of underlying database.
 
+## 2. Bigdawg: big data working working
+- Reference implementation of polystore database.
+- High performance ingest and analytics.
+- Support location transparency vs semantic completeness
