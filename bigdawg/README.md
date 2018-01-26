@@ -16,3 +16,14 @@ This installation is setting up polystore using docker container.
 - Reference implementation of polystore database.
 - High performance ingest and analytics.
 - Support location transparency vs semantic completeness
+
+## 3. BigDawg: Query & DataModel
+- Concept of Islands: Relational, array ...
+- User Specifies the Island: 
+  - *Relational(Select avg(temp) from device)*
+  - *Array(Multiply(A,B))*
+- Islands:
+  - Have a data model, A language or set of operators, A set of candidate database engines.
+  - Islands do intersetions of databases
+  - Bigdawg does union of Islands.
+  
