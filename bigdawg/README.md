@@ -34,3 +34,15 @@ This installation is setting up polystore using docker container.
 
 - Analytics: Realtime : So support for streaming databases in future.
 - Prototype for medical data
+- Installation sets up a demo on MIMIC II database
+  - curl -X POST -d "bdrel(select * from mimic2v26.d_patients limit 4;)" http://localhost:8080/bigdawg/query/
+  
+## 5. Query Interface
+
+- curl -X POST -d "<query-goes-here>" http://localhost:8080/bigdawg/query/
+- curl -X POST -d "bdrel(select * from mimic2v26.d_patients limit 4;)" http://localhost:8080/bigdawg/query/
+- curl -X POST -d "bdarray(filter(myarray,dim1>150))" http://localhost:8080/bigdawg/query/
+
+
+
+
