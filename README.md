@@ -1,6 +1,8 @@
 # Learnings
 
-# Some of the random stuff
+# Some of the random stuff, I love to explore in Busy Times!!
+
+## 6. [Machine Learning](https://github.com/sandeep-iitr/Learnings-Big-Data/tree/master/machine-learning)
 
 ## 5. [Intel-Bigdawg, Polystore](https://github.com/sandeep-iitr/Learnings-Big-Data/tree/master/bigdawg)
 
