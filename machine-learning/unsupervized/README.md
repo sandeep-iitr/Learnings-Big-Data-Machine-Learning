@@ -40,5 +40,12 @@
     - Eg: Logarithmic transformations.
   - It is ART and SCIENCE together.
   
-
+### How to Evaluate
+- We have labelled data/Labelled classes.
+- Because of clustering, every data point have a cluster assigned to it.
+- Measures:
+  - Cluster are pure: Most of data points should belong to a single class.
+  - Homogenity: Measure of how pure the clusters are.
+    - Entropy: Measure of uncertainity in events.
+    
   
