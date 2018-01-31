@@ -14,3 +14,12 @@
   - Proposed in 1950's.
   - Most frequently used clustering algorithm.
   
+### What is the right K:
+- Some idea by visualizing data.
+- By increasing K, initially the cost may decrease, and may increase later
+  - but this doesn't workf for all kinds of clusters and datasets.
+
+### K-Means: Allows us to discover classes
+- Life, constantly tries to find patterns.
+- Motivation of K-Means.
+  - If there are labels to be assigned. If there are categories inherent in data, then features must have different distribution.
