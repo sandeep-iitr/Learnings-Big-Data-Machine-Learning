@@ -28,4 +28,17 @@
 ### PCA/SVD VS NMF
 - Converting data to 2D for K-means.
 - PCA is not good for preserving class labels.
-  - PCA: Project data, such that, variance of the projection is maximum
+  - PCA: Projects data, such that, variance of the projection is maximum
+    - Not always good for clustering.    
+
+- NMF: Performs better sometimes.
+  
+ 
+### Clustering Issues:
+  - Sometimes it doesn't work, when the data is spherical.
+  - A non-linear transformation on data, before clustering may help to improve the results.
+    - Eg: Logarithmic transformations.
+    
+
+
+  
