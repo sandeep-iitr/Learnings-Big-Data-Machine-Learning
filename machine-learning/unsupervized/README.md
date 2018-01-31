@@ -8,4 +8,9 @@
   - Minimize the distance of the cluster from the centroid.
 - Algorithm:
   - Randomly initialize the K cluster.
+  - Iterate until convergence:
+    - For each data pointm find the closest cluster center (Partitioning step)
+    - Replace each centroid by average of data points in its partition.
+  - Proposed in 1950's.
+  - Most frequently used clustering algorithm.
   
