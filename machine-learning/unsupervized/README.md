@@ -23,3 +23,9 @@
 - Life, constantly tries to find patterns.
 - Motivation of K-Means.
   - If there are labels to be assigned. If there are categories inherent in data, then features must have different distribution.
+
+
+### PCA/SVD VS NMF
+- Converting data to 2D for K-means.
+- PCA is not good for preserving class labels.
+  - PCA: Project data, such that, variance of the projection is maximum
