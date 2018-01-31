@@ -38,7 +38,7 @@
   - Sometimes it doesn't work, when the data is spherical.
   - A non-linear transformation on data, before clustering may help to improve the results.
     - Eg: Logarithmic transformations.
-    
-
+  - It is ART and SCIENCE together.
+  
 
   
