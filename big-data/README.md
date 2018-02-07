@@ -1,5 +1,15 @@
 # Challenges Faced Recently, updated reversely, mostly collection good papers and works
 
+## 6. [Apache Sqoop](http://sqoop.apache.org/)
+- First Stable Release: 2015. Top level Apache project
+
+Ingest data from RDBMS (MySQL, Oracle etc) into HDFS. It is a commandline tool. Output in HDFS is a set of files containing a copy of the imported table or datasets. 
+
+- Like batch type of data ingestion rather than the streaming/push sources. 
+
+**[commands and definitions](http://sqoop.apache.org/docs/1.4.7/SqoopUserGuide.html#_connecting_to_a_database_server)**
+
+
 ## 5. Macrobase: Prioritizing Attention in Fast Data/ A Search Engine for Fast Data Streams
 [A good video at Data Eng Conf](http://www.dataengconf.com/macrobase-a-search-engine-for-fast-data-streams)
 - Motivation: User attention is limited. A lot of collected data is not used. Roughly only 6% of data is used by big companies.
