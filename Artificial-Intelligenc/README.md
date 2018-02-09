@@ -9,4 +9,7 @@ If the word is ''feared'', then ''they'' presumably refers to the city council; 
 
 ## Systematic search strategies
 - Terminologies:
-  - Goal, Goal formulation, Problem formulation, 
+  - Goal, Goal formulation, Problem formulation, env. is determinisitic.
+- Search:
+  - Process of looking at a sequence of actions that reaches the goal.
+  
