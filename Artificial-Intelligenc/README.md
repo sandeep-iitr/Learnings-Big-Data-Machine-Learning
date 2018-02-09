@@ -7,4 +7,6 @@ A Winograd schema is a pair of sentences that differ in only one or two words an
 - The city councilmen refused the demonstrators a permit because they [feared/advocated] violence.
 If the word is ''feared'', then ''they'' presumably refers to the city council; if it is ''advocated'' then ''they'' presumably refers to the demonstrators.
 
-
+## Systematic search strategies
+- Terminologies:
+  - Goal, Goal formulation, Problem formulation, 
