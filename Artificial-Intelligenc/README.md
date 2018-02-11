@@ -82,10 +82,16 @@ If the word is ''feared'', then ''they'' presumably refers to the city council; 
      - Node vs State: Node is bookeeping datastructure used to represent search tree. A state corresponds to configuration of the world. Nodes are on a particular path defined by parent pointer, whereas states are not. Two different nodes may contain the same world state which might be generated via different search paths. 
    
    - **Problem solving Performance**:
-     - Completeness: Is algorithm guaranteed to find a solution, if there is one?
-     - Optimality: Does the algorithm find optimal solution.
-     - Time Complexity: Measured in terms of number of nodes generated during search.
-     - Space Complexity: Maximum number of nodes stored in memory.
+     - **Completeness**: Is algorithm guaranteed to find a solution, if there is one?
+     - **Optimality**: Does the algorithm find optimal solution.
+     - **Time Complexity**: Measured in terms of number of nodes generated during search.
+     - **Space Complexity**: Maximum number of nodes stored in memory.
      
+### Uninformed Search Strategies
+Blind search. Generate successors and distinguish goal state from non-goal state. No additional information
+
+#### Breadth First Search
+
+
      
      
