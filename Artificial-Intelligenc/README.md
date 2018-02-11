@@ -140,4 +140,12 @@ Only search until level l. Solves the infinite path problem of DFS.
 Limits the path cost, rather than the depth.
 [Good Notes with question 2 and answer, on page 2](https://www.cs.rochester.edu/~brown/242/answers/04FinalAns.pdf)
 
+#### Bidirectional Search
+- Requires a method for computing predecesors. 
+- Requires more space, atleast frontier of one of the search has to be kept in memory. 
+- **Space and Time Complexity** if BFS is used for both sides: O(b^(d/2))
+- It is **optimal** (steps cost all identical) and **complete** (branching factor is finite)
+
+
+
 
