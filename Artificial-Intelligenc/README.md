@@ -109,3 +109,35 @@ BFS is optimal only if all step costs are equal. Instead of expanding the shallo
 - It is **Optimal**.
 - It can struck in infinite loop: if there are negative costs, or paths with infinite sequence and zero cost.
 - **Worst case Time and Space Complexity** = O(b^(1+a)), where a = (Cost of optimal solution)/(Minimum of the action costs)
+
+
+#### Depth First Search
+Use LIFO, in the graph search algorithm. Most recently generated node is chosen for expansion.
+- Fails if an infinite non-goal path is encountered.
+- Complexity depends on Max depth. Depth of solution doesn't matter, because we will go to the deepest levels.
+- **Time Complexity**: m is max depth of tree = O(b^m)
+- **Space Complexity**: generate b nodes, and remove 1 = O(m(b-1)) = O(mb).
+  - b is branching factor. m is max depth
+- **Optimality**: No, we might find a solution which is not optimal. 
+- **Complete**: We might go into an infinite loop. No.
+
+#### Depth Limited Search
+Only search until level l. Solves the infinite path problem of DFS. 
+- let d be the depth of the solution
+  - if l<d, then it is incomplete
+  - if l>d, then it is non-optimal.
+  - **Time complexity** is: O(b^l) and **Space complexity** is O(bl)
+ 
+#### Iterative Deepening Depth First Search
+- Gradually increase the depth limit until goal is found.
+- Since most of the nodes are in bottom level, tbe overhead is modest.
+- **Space complexity** is still: O(bd). d is depth of the solution.
+- **Time Complexity** is: O(b^d)
+- It combines benefit of BFS and DFS.
+- **Complete** when branching factor is finite. and **optimal** when path cost is non-decreasing function of depth of nodes.
+
+#### Iterative Lengthening Search
+Limits the path cost, rather than the depth.
+[Good Notes with question 2 and answer, on page 2](https://www.cs.rochester.edu/~brown/242/answers/04FinalAns.pdf)
+
+
