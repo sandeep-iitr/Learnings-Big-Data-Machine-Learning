@@ -23,5 +23,13 @@ If the word is ''feared'', then ''they'' presumably refers to the city council; 
     - Transition model: output state after applying action.
     - Goal test
     - Path cost
+    - Solution and Optimal Solution
+- **Toy Problems**
+   - Vacuum World Toy Problem
+     - State: Location of vacuum, and dirt.
+     - Actions: Move Left, Move Right, Suck
+     - Transition Model: Actions have their affect and may change the state.
+     - Goal Test: Check when all squares are clean.
+     - Path Cost: each step costs 1.
    
   
