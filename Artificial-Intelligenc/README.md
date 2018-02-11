@@ -91,7 +91,21 @@ If the word is ''feared'', then ''they'' presumably refers to the city council; 
 Blind search. Generate successors and distinguish goal state from non-goal state. No additional information
 
 #### Breadth First Search
+Shallowest unexpanded node is chosen for expansion. FIFO queue for frontier. 
+- Algorithm similar to Graph Search: Can do the goal test, when the node is generated or when it is expanded. 
+- Time Complexity: Total number of nodes generated
+  - Goal test when node is generated: b + b^2 + b^3 .... b^d = O(b^d)
+  - Goal test when the node is expanded:  O(b^(d+1))
+- Space Complexity: 
+  - Explored set: nodes which are expanded = O(b^(d-1))
+  - Frontier: Leaf nodes at depth d = O(b^d)
+  - O(b^d): Dominated by Frontier.
+**Practically memory requirements are a bigger problem for BFS than the time complexity**
 
-
-     
-     
+#### Uniform cost search: With different cost on edges.
+BFS is optimal only if all step costs are equal. Instead of expanding the shallowest node, UCS expands the node with lowest path cost g(n). 
+- **Ordering of the queue by path cost**.
+- **Goal test is applied to the node when it is selected for expansion**, rather then when it is first generated. 
+- It is **Optimal**.
+- It can struck in infinite loop: if there are negative costs, or paths with infinite sequence and zero cost.
+- **Worst case Time and Space Complexity** = O(b^(1+a)), where a = (Cost of optimal solution)/(Minimum of the action costs)
