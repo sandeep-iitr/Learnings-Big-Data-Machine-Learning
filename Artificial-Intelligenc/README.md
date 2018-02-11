@@ -53,4 +53,18 @@ If the word is ''feared'', then ''they'' presumably refers to the city council; 
    - TSP: Travelling salesperson problem: Touring problem in which each city must be visited exactly once.
    - And many other variants and additions to this list.
    
+ - **Searching for Solutions**
+   - Search Tree: initial state as the root, branches as the actions, and node corresponds to the states in the state space.
+   - Frontier: Set of all leaf nodes, available for expansion at any given point.
+   - Search Strategy: Choosing which state to expand next.
+   - Removing loopy paths: Consider path costs are additive to remove the loops.
+   - Redundant paths: More that one way to get from one state to another. Choose the cost optimal one here.
+   
+   - **Function Tree Search**: returns a solution or failure.
+       - initialize the Frontier using initial state of the problem
+       - loop do
+         - if Frontier is empty then return failure.
+         - Choose a leaf node, remove it from Frontier
+         - if the node contains goal state, then return the corresponsing solution.
+         - expand the chosen node, add the resulting node to the Frontier.
    
