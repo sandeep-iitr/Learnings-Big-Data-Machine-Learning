@@ -60,11 +60,20 @@ If the word is ''feared'', then ''they'' presumably refers to the city council; 
    - Removing loopy paths: Consider path costs are additive to remove the loops.
    - Redundant paths: More that one way to get from one state to another. Choose the cost optimal one here.
    
-   - **Function Tree Search**: returns a solution or failure.
+   - **Function Tree Search(Problem)**: returns a solution or failure.
        - initialize the Frontier using initial state of the problem
        - loop do
          - if Frontier is empty then return failure.
          - Choose a leaf node, remove it from Frontier
          - if the node contains goal state, then return the corresponsing solution.
          - expand the chosen node, add the resulting node to the Frontier.
-   
+         
+   - **Function Graph Search(Problem)**: 
+       - initialize the Frontier using initial state of the problem
+       - initialize the explored set to be empty.
+       - loop do
+         - if Frontier is empty then return failure.
+         - Choose a leaf node, remove it from Frontier.
+         - if the node contains goal state, then return the corresponsing solution.
+         - add the node to the explored set.
+         - expand the chosen node, add the resulting node to the Frontier only if not in the frontier or in explored set.
