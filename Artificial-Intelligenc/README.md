@@ -151,6 +151,8 @@ Limits the path cost, rather than the depth.
 heuristic function: which evaluate the possible next choice to states to pick the best.
 
 #### Greedy Best First Search
+h(n): Heuristic. Estimated cost of the current state from the goal.
+
 - Choose the next state, which is closest to the goal. (heuristic)
 - Goal test: if expanded state is goal state.
 - **Optimal**: It is not. It may find less optimal solution.
@@ -158,5 +160,13 @@ heuristic function: which evaluate the possible next choice to states to pick th
 - **Time and Space complexity in worst case**: O(b^m), where m is the maximum depth of search space. 
 
 #### A* Algorithm
-
+We want heuristic and cost both low. We want closer to the goal state and closer to the starting state.
+- f(n) = g(n) + h(n): this the total function we can use. How expensive the solution is. What is cost of the entire thing.
+- Admissable heuristic: h(n) <= True cost of reaching the state n in a optimal way
+- Maintain the generated nodes in frontier, and pick the min f(n), when expanding.
+- **Optimal**: it is optimal
+- **Space Complexity**: O(b^(d+1)): Dump version of BFS. use iterative deepening with limit on f value to fix this. 
+- **Time Complexity**: O(b^(d\*e)), where e is the relative error between true heuristic(h1) and heuristic (h2) = (h1-h2)/h1
+  - d is the solution depth.
+  
 
