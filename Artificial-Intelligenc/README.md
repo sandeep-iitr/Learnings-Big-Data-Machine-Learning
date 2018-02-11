@@ -147,5 +147,16 @@ Limits the path cost, rather than the depth.
 - It is **optimal** (steps cost all identical) and **complete** (branching factor is finite)
 
 
+### Informed Heuristic Search Strategies
+heuristic function: which evaluate the possible next choice to states to pick the best.
+
+#### Greedy Best First Search
+- Choose the next state, which is closest to the goal. (heuristic)
+- Goal test: if expanded state is goal state.
+- **Optimal**: It is not. It may find less optimal solution.
+- **Completeness**: Incomplete even in finite state space. (Tree search version may enter into infinite loop). However graph search version is complete in finite space. 
+- **Time and Space complexity in worst case**: O(b^m), where m is the maximum depth of search space. 
+
+#### A* Algorithm
 
 
