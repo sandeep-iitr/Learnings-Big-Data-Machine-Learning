@@ -31,5 +31,11 @@ If the word is ''feared'', then ''they'' presumably refers to the city council; 
      - Transition Model: Actions have their affect and may change the state.
      - Goal Test: Check when all squares are clean.
      - Path Cost: each step costs 1.
-   
+     
+   - 8-Puzzle: 3 by 3 board with eight numbered tiles and a blank. The objective is to reach specified goal state.
+     - State: Location of each of eight tiles and a blank.
+     - Initial State: Any state can be designated as initial state, or it may be given.
+     - Action: Movement of blank space, Left: Right: Top: Bottom. Other formulations possible.
+     - Transition model, goal test and path cost follows respectively.
+     
   
