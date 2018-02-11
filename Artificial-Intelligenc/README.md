@@ -86,7 +86,11 @@ If the word is ''feared'', then ''they'' presumably refers to the city council; 
      - **Optimality**: Does the algorithm find optimal solution.
      - **Time Complexity**: Measured in terms of number of nodes generated during search.
      - **Space Complexity**: Maximum number of nodes stored in memory.
-     
+
+---
+---
+---
+
 ### Uninformed Search Strategies
 Blind search. Generate successors and distinguish goal state from non-goal state. No additional information
 
@@ -147,6 +151,10 @@ Limits the path cost, rather than the depth.
 - It is **optimal** (steps cost all identical) and **complete** (branching factor is finite)
 
 
+---
+---
+---
+
 ### Informed Heuristic Search Strategies
 heuristic function: which evaluate the possible next choice to states to pick the best.
 
@@ -169,4 +177,9 @@ We want heuristic and cost both low. We want closer to the goal state and closer
 - **Time Complexity**: O(b^(d\*e)), where e is the relative error between true heuristic(h1) and heuristic (h2) = (h1-h2)/h1
   - d is the solution depth.
   
+
+---
+---
+---
+## Heuristics
 
