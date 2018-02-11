@@ -46,4 +46,11 @@ If the word is ''feared'', then ''they'' presumably refers to the city council; 
        - Action2: Add a new queen to the leftmost empty column such that is not attacked by any other column. 
      - Complete-State formulation: Start with all 8 queens on the board, and move them around.
      
-    
+ - **Real World Problems**
+   - **Route Finding Problems**
+   - Touring Problems: Visit every city atleast once, with starting and ending in the same city.
+     - State: will include the current city, and the set of visited cities as well.
+   - TSP: Travelling salesperson problem: Touring problem in which each city must be visited exactly once.
+   - And many other variants and additions to this list.
+   
+   
