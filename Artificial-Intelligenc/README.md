@@ -414,4 +414,12 @@ be solved in time linear in the number of variables
   - Remove the nodes which make the graph a tree. Assign values to the removed nodes, and make change in the domain of nodes of tree, due to constraints of the removed nodes. Now solve the tree structures CSP, in polynomial time. If no solution exist, try the different values for removed nodes.
 - one based on collapsing nodes together
   - Also called **tree decomposition of the constraint graph** into a set of connected subproblems. 
-  
+- Tree Decomposition
+  - Every variable in the original problem appears in at least one of the subproblems
+  - If two variables are connected by a constraint in the original problem, they must appear together (along with the constraint) in at least one of the subproblems.
+  - If a variable appears in two subproblems in the tree, it must appear in every subproblem
+along the path connecting those subproblems
+    
+The first two conditions ensure that all the variables and constraints are represented in the
+decomposition. The third condition seems rather technical, but simply reflects the constraint
+that any given variable must have the same value in every subproblem in which it appears. 
