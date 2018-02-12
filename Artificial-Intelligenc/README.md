@@ -348,4 +348,15 @@ detected, then BACKTRACK returns failure, causing the previous call to try anoth
 in handy. It attempts to reduce the branching factor on future choices by selecting the variable
 that is involved in the largest number of constraints on other unassigned variables.
 
+- least-constraining-value heuristic: It prefers the value that rules out the fewest choices for the neighboring variables in
+the constraint graph.
+
+Why should variable selection be fail-first, but value selection be fail-last? It turns out
+that, for a wide variety of problems, a variable ordering that chooses a variable with the
+minimum number of remaining values helps minimize the number of nodes in the search tree
+by pruning larger parts of the tree earlier.
+
+### 6.3.2 Interleaving search and inference
+- **forward checking**: Whenever a variable X is assigned, the forward-checking process establishes arc consistency for it: for each unassigned variable Y that is connected to X by a constraint, delete from Y ’s domain any
+value that is inconsistent with the value chosen for X. 
 
