@@ -182,4 +182,24 @@ We want heuristic and cost both low. We want closer to the goal state and closer
 ---
 ---
 ## Heuristics
+Effect of heuristic: Effective branching factor.
 
+### Heuristics for 8 puzzle
+- H1
+  - The number of misplaced tiles
+- H2
+  - The sum of the distances of the tiles from their goal position.
+  - Sum of horizontal and vertical distance.
+  
+### Finding Heuristics
+- Relax the problem
+- Solve the subproblem.
+
+### Pattern Database: SubProblems
+Generate the admissible from solution cost of sub problems. 
+- pattern database: store the exact solution cost for every possible subproblem instance. This is calculated by searching back 
+from the goal. 
+
+
+
+  
