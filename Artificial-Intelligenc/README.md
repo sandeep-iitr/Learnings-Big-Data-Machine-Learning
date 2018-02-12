@@ -331,11 +331,16 @@ binary constraints. A network is arc-consistent if every variable is arc
 consistent with every other variable. For example, consider the constraint Y = X^2 where the domain of both X and Y is the set of digits. We can write this constraint explicitly as
 (X, Y ), {(0, 0), (1, 1), (2, 4), (3, 9))}.
 
-Assume a CSP with n variables, each with domain size at most d, and with c binary constraints (arcs). Each arc (Xk,Xi) can
-be inserted in the queue only d times because Xi has at most d values to delete. Checking consistency of an arc can be done in O(d^2) time, so we get O(cd^3) total worst-case time. 
+- **Arc consistency algorithm**
+  - To make every variable arc-consistent, the AC-3 algorithm maintains a queue of arcs to consider. (order of arcs not important), Initially, the queue contains all the arcs in the CSP.
+  - AC-3 then pops off an arbitrary arc (Xi,Xj) from the queue and makes Xi arc-consistent with respect to Xj, ie we try to reduce the domain of Xi, making sure that Xj has valid values. This may happen is Xj is dependent of Xi.
+    - If this leaves Di(domain of Xi) unchanged, the algorithm just moves on to the next arc.
+    - But if this revises Di (makes the domain smaller), then we add to the queue all arcs (Xk,Xi) where Xk is a neighbor of Xi. We need to do that because the change in Di might enable further reductions in the domains of Dk, even if we have previously considered Xk. If Di is revised down to nothing, then we know the whole CSP has no consistent solution, and AC-3 can immediately return failure. Otherwise, we keep checking, trying to remove values from the domains of variables until no more arcs are in the queue. At that point, we are left with a CSP that is equivalent to the original CSP—they both have the same solutions—but the arc-consistent CSP will in most cases be faster to search because its variables have smaller domains
+
+- Complexity: Assume a CSP with n variables, each with domain size at most d, and with c binary constraints (arcs). Each arc (Xk,Xi) can be inserted in the queue only d times because Xi has at most d values to delete. Checking consistency of an arc can be done in O(d^2) time, so we get O(cd^3) total worst-case time. 
 
 ### 6.2.3 Path consistency
-Path consistency tightens the binary constraints by using implicit constraints that are inferred by looking at triples of variables.
+Path consistency tightens the binary constraints by using implicit constraints that are inferred by looking at triples of variables. 
 
 A two-variable set {Xi,Xj} is path-consistent with respect to a third variable Xm if,
 for every assignment {Xi = a,Xj = b} consistent with the constraints on {Xi,Xj}, there is
@@ -396,5 +401,12 @@ The problem is that it makes the current variable arc-consistent(enforces constr
 ### Maintaining Arc Consistency (MAC) Algorithm
 Do forward checking, and look ahead and maintain all the variables arc consistent.
 - Recursively propagate the constraints: **After assigning the variable, do the forward checking (Reduce the domains of all un assigned variables), and then consider that constraints are satisfied on the neighbors of the currently assigned variable**.
+
+
+## 6.5 THE STRUCTURE OF PROBLEMS
+- Independent subproblems identification can be done from the constraint satisfication graph.
+- A constraint graph is a tree when any two variables are connected by only one path. We show that any tree-structured CSP can
+be solved in time linear in the number of variables
+- In a tree structures CSP: Once linearly ordered. We can move through it linearly, and solve it. [More Details are here online link with book example](http://cs188ai.wikia.com/wiki/Tree_Structure_CSPs)
 
 
