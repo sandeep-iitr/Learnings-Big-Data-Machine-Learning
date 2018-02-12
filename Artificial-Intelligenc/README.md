@@ -256,5 +256,9 @@ Max prefers to move to the state of maximum value, and min prefer to move to the
 We can prune some of the branches.
 - α = the value of the best (i.e., highest-value) choice we have found so far at any choice point along the path for MAX.
 - β = the value of the best (i.e., lowest-value) choice we have found so far at any choice point along the path for MIN.
+- Max node only updates the alpha, and Min node only updates the Beta.
+- (Alpha, Beta): initialize (-inf,+inf)
+- Pruning when: Beta<= Alpha.
+
 
 
