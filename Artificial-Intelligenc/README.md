@@ -200,6 +200,35 @@ Generate the admissible from solution cost of sub problems.
 - pattern database: store the exact solution cost for every possible subproblem instance. This is calculated by searching back 
 from the goal. 
 
+---
+---
+---
 
+## Local Search Strategies
+Good, where path to goal is irrevalent, and what matters is goal state.
+- We don't do a systematic search
 
+### Hill Climbing Search
+- No memory, blindfolded. generate all possible positions and pick the best.
+- Eg: Conitnue move toward a direction of increasing value. (value may be the closeness to the goal)
+- Greedy local search. 
+- **Beam Search**: variant of hill climbing, where we use the size of beam for parallel branches. Eg: beam size = 3, we start from 3 random initial states, and generate successors, then pick the next 3 best successor states. It works better than randomly doing the 3 starts. As we can skip the bad branches.
+
+### Simulated Annealing
+Balance between exploration and expoitation
+
+Algorithm
+- Compare next state to the current state:
+  - Better: Pick it
+  - Worse: Pick it with a probability P = e^((E)/(T)). E is how much worse this solution
+    - If this is very very bad solution (-ve infinity): P = 0.
+    - If T is very high (initial start of the problem): we choose the another state. This is exploration time.
+    - If T is 0, we go back in case of worst state.
+    
+### Genetic Algorithm
+- Steps: 
+  - Selection
+  - Cross Over
+  - Mutation
+ 
   
