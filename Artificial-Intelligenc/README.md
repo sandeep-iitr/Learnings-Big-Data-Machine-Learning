@@ -294,8 +294,58 @@ When unpredicatble external events affect the game.
 To solve a CSP, we need to define a state space and the notion of a solution. Each
 state in a CSP is defined by an assignment of values to some or all of the variables.
 
+- Visualize a CSP as a constraint graph, as shown in Figure 6.1(b).
 
+### Types of Contraints
+- unary constraint
+- binary constraint
+- global constraint: Alldiff
+These constraints can be represented in a constraint hypergraph, such as the one shown in Figure 6.2(b). A hypergraph consists of ordinary nodes (the circles in the figure) and hypernodes (the squares), which represent n-ary constraints. 
 
+### 6.2.1 Node consistency
+A single variable is node-consistent if all the values in the variable’s domain satisfy the variable’s unary constraints.
 
+### 6.2.2 Arc consistency
+A variable in a CSP is arc-consistent if every value in its domain satisfies the variable’s
+binary constraints. A network is arc-consistent if every variable is arc
+consistent with every other variable. For example, consider the constraint Y = X^2 where the domain of both X and Y is the set of digits. We can write this constraint explicitly as
+(X, Y ), {(0, 0), (1, 1), (2, 4), (3, 9))}.
+
+Assume a CSP with n variables, each with domain size at most d, and with c binary constraints (arcs). Each arc (Xk,Xi) can
+be inserted in the queue only d times because Xi has at most d values to delete. Checking consistency of an arc can be done in O(d^2) time, so we get O(cd^3) total worst-case time. 
+
+### 6.2.3 Path consistency
+Path consistency tightens the binary constraints by using implicit constraints that are inferred by looking at triples of variables.
+
+A two-variable set {Xi,Xj} is path-consistent with respect to a third variable Xm if,
+for every assignment {Xi = a,Xj = b} consistent with the constraints on {Xi,Xj}, there is
+an assignment to Xm that satisfies the constraints on {Xi,Xm} and {Xm,Xj}. This is called
+path consistency because one can think of it as looking at a path from Xi to Xj with Xm in
+the middle.
+
+### 6.2.4 K-consistency
+A CSP is k-consistent if, for any set of k − 1 variables and for any consistent assignment to those
+variables, a consistent value can always be assigned to any kth variable
+
+1-consistency says that, given the empty set, we can make any set of one variable consistent: this is what we
+called node consistency. 2-consistency is the same as arc consistency. For binary constraint
+networks, 3-consistency is the same as path consistency.
+
+## backtracking search
+The term backtracking search  is used for a depth-first search that chooses values for  one variable at a time and backtracks when a variable has no legal values left to assign.
+
+It repeatedly chooses an unassigned variable, and then tries
+all values in the domain of that variable in turn, trying to find a solution. If an inconsistency is
+detected, then BACKTRACK returns failure, causing the previous call to try another value.
+
+### Which variable should be assigned next (SELECT-UNASSIGNED-VARIABLE), and in what order should its values be tried (ORDER-DOMAIN-VALUES)?
+
+### 6.3.1 Variable and value ordering
+- minimum remaining-values (MRV) heuristic.
+  - It also has been called the “most constrained variable” or
+    "fail-first" heuristic, the latter because it picks a variable that is most likely to cause a failure soon, thereby pruning the search tree.
+  - The MRV heuristic doesn’t help at all in choosing the first region to color in Australia, because initially every region has three legal colors. In this case, the degree heuristic comes
+in handy. It attempts to reduce the branching factor on future choices by selecting the variable
+that is involved in the largest number of constraints on other unassigned variables.
 
 
