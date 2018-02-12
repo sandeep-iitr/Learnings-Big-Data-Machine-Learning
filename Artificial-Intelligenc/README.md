@@ -257,4 +257,4 @@ We can prune some of the branches.
 - α = the value of the best (i.e., highest-value) choice we have found so far at any choice point along the path for MAX.
 - β = the value of the best (i.e., lowest-value) choice we have found so far at any choice point along the path for MIN.
 
- 
+
