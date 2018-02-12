@@ -279,4 +279,23 @@ When unpredicatble external events affect the game.
 - The ordering of values now affect. And the alpha beta still works, but due to chance, the expected values comes into picture.
 
 
+---
+---
+---
+---
+
+# Constraint satisfaction : 6.0
+
+## DEFINING CONSTRAINT SATISFACTION PROBLEMS 6.1
+- X is a set of variables, {X1, . . . ,Xn}.
+- D is a set of domains, {D1, . . . ,Dn}, one for each variable.
+- C is a set of constraints that specify allowable combinations of values.
+
+To solve a CSP, we need to define a state space and the notion of a solution. Each
+state in a CSP is defined by an assignment of values to some or all of the variables.
+
+
+
+
+
 
