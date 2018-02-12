@@ -260,5 +260,23 @@ We can prune some of the branches.
 - (Alpha, Beta): initialize (-inf,+inf)
 - Pruning when: Beta<= Alpha.
 
+## Evaluation Functions 5.4.1
+avoiding search all the way to the terminal node.
+
+## 5.4.2 Cut off search
+Call the heuristic evaluation function, given the cut off. 
+- Evaluation function should be applied only to positions that are **quiescent**.
+- Nonquiescent positions can be expanded further using quiescence search until quiescent positions are reached.
+- horizon effect: It arises when the program is facing an opponent’s move that causes serious damage and is ultimately unavoidable, but can be temporarily avoided by delaying tactics. 
+
+## 5.5 Stochastic Games
+When unpredicatble external events affect the game.
+- Chance nodes in addition to min-max nodes.
+- Now the expected value of a position is calculated: Avg over all possible values of the chance nodes.
+- Generalize the minimax value for deterministic games to an expectiminimax value for games with chance nodes.
+### Evaluation functions for games of chance: 5.5.1
+- This need to be designed carefully.
+- The ordering of values now affect. And the alpha beta still works, but due to chance, the expected values comes into picture.
+
 
 
