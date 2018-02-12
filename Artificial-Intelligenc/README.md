@@ -287,6 +287,7 @@ When unpredicatble external events affect the game.
 # Constraint satisfaction : 6.0
 
 ## DEFINING CONSTRAINT SATISFACTION PROBLEMS 6.1
+## [Good Exercise](https://s3-us-west-2.amazonaws.com/cs188websitecontent/written_hw/hw4_sol.pdf)
 - X is a set of variables, {X1, . . . ,Xn}.
 - D is a set of domains, {D1, . . . ,Dn}, one for each variable.
 - C is a set of constraints that specify allowable combinations of values.
