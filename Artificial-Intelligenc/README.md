@@ -409,4 +409,9 @@ Do forward checking, and look ahead and maintain all the variables arc consisten
 be solved in time linear in the number of variables
 - In a tree structures CSP: Once linearly ordered. We can move through it linearly, and solve it. [More Details are here online link with book example](http://cs188ai.wikia.com/wiki/Tree_Structure_CSPs)
 
-
+### Constraint graphs can be reduced to trees
+- one based on removing nodes
+  - Remove the nodes which make the graph a tree. Assign values to the removed nodes, and make change in the domain of nodes of tree, due to constraints of the removed nodes. Now solve the tree structures CSP, in polynomial time. If no solution exist, try the different values for removed nodes.
+- one based on collapsing nodes together
+  - Also called **tree decomposition of the constraint graph** into a set of connected subproblems. 
+  
