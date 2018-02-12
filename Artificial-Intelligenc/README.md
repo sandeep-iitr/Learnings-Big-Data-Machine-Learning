@@ -302,6 +302,26 @@ state in a CSP is defined by an assignment of values to some or all of the varia
 - global constraint: Alldiff
 These constraints can be represented in a constraint hypergraph, such as the one shown in Figure 6.2(b). A hypergraph consists of ordinary nodes (the circles in the figure) and hypernodes (the squares), which represent n-ary constraints. 
 
+### BackTracking Search
+The term backtracking search  is used for a depth-first search that chooses values for one variable at a time and backtracks when a variable has no legal values left to assign.
+- Algorithm in figure 6.5
+  - Select a variable ordering (**minimum remaining-values (MRV) heuristic**)
+    - For each variable now: select a value ordering(**least-constraining-value**)
+      - If value is consistent with assignment. (binary constraint)
+      - Do the inference (arc, path or k consistency). 
+      - If inference is not failure, add them to the assignment.
+- BACKTRACKING-SEARCH keeps only a single representation of a state and
+alters that representation rather than creating new ones
+
+### Constraint propagation:
+In CSPs there is a choice: an algorithm can search (choose a new variable assignment from several possibilities)
+or do a specific type of inference INFERENCE called constraint propagation: using the constraints to
+reduce the number of legal values for a variable, which in turn can reduce the legal values
+for another variable, and so on. Constraint propagation may be intertwined with search, or it
+may be done as a preprocessing step, before search starts. Sometimes this preprocessing can
+solve the whole problem, so no search is required at all.
+
+
 ### 6.2.1 Node consistency
 A single variable is node-consistent if all the values in the variable’s domain satisfy the variable’s unary constraints.
 
@@ -341,22 +361,40 @@ detected, then BACKTRACK returns failure, causing the previous call to try anoth
 ### Which variable should be assigned next (SELECT-UNASSIGNED-VARIABLE), and in what order should its values be tried (ORDER-DOMAIN-VALUES)?
 
 ### 6.3.1 Variable and value ordering
-- minimum remaining-values (MRV) heuristic.
-  - It also has been called the “most constrained variable” or
-    "fail-first" heuristic, the latter because it picks a variable that is most likely to cause a failure soon, thereby pruning the search tree.
-  - The MRV heuristic doesn’t help at all in choosing the first region to color in Australia, because initially every region has three legal colors. In this case, the degree heuristic comes
+- **minimum remaining-values (MRV) heuristic**.
+  - Pick the ordering of variables such that we have minimum values to assign to a particular variable. As we go on assigning variables, the values which are available to us for remaining goes on decreasing. 
+  
+  - It also has been called the **“most constrained variable”** or
+    **"fail-first"** heuristic, the latter because it picks a variable that is most likely to cause a failure soon, thereby pruning the search tree.
+  - The MRV heuristic doesn’t help at all in choosing the first region to color in Australia, because initially every region has three legal colors. In this case, the **degree heuristic** comes
 in handy. It attempts to reduce the branching factor on future choices by selecting the variable
 that is involved in the largest number of constraints on other unassigned variables.
 
-- least-constraining-value heuristic: It prefers the value that rules out the fewest choices for the neighboring variables in
-the constraint graph.
-
+- **least-constraining-value** heuristic: It prefers the value that rules out the fewest choices for the neighboring variables in the constraint graph.
+  - Pick value of variable which is less likely to fail in future. 
+  
 Why should variable selection be fail-first, but value selection be fail-last? It turns out
 that, for a wide variety of problems, a variable ordering that chooses a variable with the
 minimum number of remaining values helps minimize the number of nodes in the search tree
 by pruning larger parts of the tree earlier.
 
 ### 6.3.2 Interleaving search and inference
-- **forward checking**: Whenever a variable X is assigned, the forward-checking process establishes arc consistency for it: for each unassigned variable Y that is connected to X by a constraint, delete from Y ’s domain any
+- **forward checking**: 
+  - Removing values which are no longer possible. 
+  - Example in Map coloring problem: 
+    - initially: WA {r,g,b}, NT{r,g,b}, SA{r,g,b} and so-on
+    - WA=R, then  NT{g,b}, SA{g,b}
+    - Q=g, NT{b}, SA{b}, NSW {r,b}
+    - V= b, SA={Empty}: Deadend
+    
+  - Forward Checking can be combined with minimum remaining value.
+  - Whenever a variable X is assigned, the forward-checking process establishes arc consistency for it: for each unassigned variable Y that is connected to X by a constraint, delete from Y ’s domain any
 value that is inconsistent with the value chosen for X. 
+  - Although forward checking detects many inconsistencies, it does not detect all of them.
+The problem is that it makes the current variable arc-consistent(enforces constraints on the current variables), but doesn’t look ahead and make all the other variables arc-consistent.
+
+### Maintaining Arc Consistency (MAC) Algorithm
+Do forward checking, and look ahead and maintain all the variables arc consistent.
+- Recursively propagate the constraints: **After assigning the variable, do the forward checking (Reduce the domains of all un assigned variables), and then consider that constraints are satisfied on the neighbors of the currently assigned variable**.
+
 
