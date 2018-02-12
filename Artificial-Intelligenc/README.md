@@ -232,3 +232,29 @@ Algorithm
   - Mutation
  
   
+----
+----
+----
+
+# Adversarial Search/ Game Playing
+Take into account what other agent may be thinking/doing in game
+
+To learn: We have a function, which tells what to do next in this particular state. We learn a policy, or how to play the game.
+
+## Zero Sum
+- First player maximizes profit, and
+- Second player minimizes profit.
+
+Eg: Tic Tac Toe: Max(x), and Min (o)
+
+Max prefers to move to the state of maximum value, and min prefer to move to the state of minimum value.
+- **Min Max** tree:
+  - Every node have a value generated in the tree. The root is the value for the player playing/starting the game.
+  - Easy extension to **multiplayer**, where a vector of values is returned, and each player tries to maximize its component.
+  
+## Alpha-Beta Pruning
+We can prune some of the branches.
+- α = the value of the best (i.e., highest-value) choice we have found so far at any choice point along the path for MAX.
+- β = the value of the best (i.e., lowest-value) choice we have found so far at any choice point along the path for MIN.
+
+ 
