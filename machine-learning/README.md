@@ -1,5 +1,12 @@
 # Machine Learning
 
+## 6. Recommendation Systems
+
+## 5. Neural-Networks
+
+## 4. Ridge Regression
+   - Algorithm-1
+
 ## 3. ROC Curve
    [Video](https://www.youtube.com/watch?v=OAl6eAyP-yo)
 
