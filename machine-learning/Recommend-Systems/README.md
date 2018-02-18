@@ -36,7 +36,9 @@ interaction.
 ### Examples: Surprise: Scikit learn
 
 from surprise import SVD
+
 from surprise import Dataset
+
 from surprise.model_selection import cross_validate
 
 #### Load the movielens-100k dataset (download it if needed).
