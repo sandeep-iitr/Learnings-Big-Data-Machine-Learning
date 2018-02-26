@@ -1,5 +1,7 @@
 # Machine Learning
 
+## 7. Optimization Methods in Learning
+
 ## 6. Recommendation Systems
 
 ## 5. Neural-Networks
