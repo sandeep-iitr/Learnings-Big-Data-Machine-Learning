@@ -9,3 +9,4 @@
 - Here machines: Say machine wants to win a game.
   - Machine has a memory, what it has done so far, and it responds to reward.
   
+## Optimization goal
