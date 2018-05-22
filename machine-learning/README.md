@@ -1,5 +1,7 @@
 # Machine Learning
 
+## 8. Learning Rate in Machine Learning
+
 ## 7. Optimization Methods in Learning
 
 ## 6. Recommendation Systems
